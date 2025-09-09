@@ -1,0 +1,403 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Ricky's Auto Repair — Tulsa</title>
+<meta name="description" content="Ricky's Auto Repair — Auto maintenance & repair in Tulsa, OK. Call +1 (918) 835-5558" />
+<style>
+  :root{
+    --blue-900: #0b4f8a;
+    --blue-700: #1370b8;
+    --blue-500: #1fa1ff;
+    --muted: #6b7280;
+    --bg: #f7fbff;
+    --card: #ffffff;
+    --accent: var(--blue-700);
+    --max-width: 1100px;
+    --radius: 12px;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,"Helvetica Neue",Arial;background:var(--bg);color:#0b1220;line-height:1.45}
+  .container{max-width:var(--max-width);margin:24px auto;padding:16px}
+  header{display:flex;align-items:center;gap:16px;justify-content:space-between}
+  .brand{display:flex;gap:12px;align-items:center}
+  .logo{
+    width:72px;height:72px;border-radius:14px;background:linear-gradient(135deg,var(--blue-700),var(--blue-500));
+    display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-size:20px;
+    box-shadow:0 6px 18px rgba(11,79,138,0.12)
+  }
+  h1{margin:0;font-size:20px}
+  .top-meta{display:flex;flex-direction:column;align-items:flex-end;gap:6px}
+  .phone{font-weight:700;color:var(--blue-900);font-size:16px;text-decoration:none}
+  .phone small{display:block;font-weight:500;color:var(--muted);font-size:12px}
+  .call-cta{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:10px;background:linear-gradient(90deg,var(--blue-700),var(--blue-500));color:white;text-decoration:none;font-weight:700;box-shadow:0 6px 18px rgba(31,161,255,0.12)}
+  nav{margin-top:12px;display:flex;gap:12px;flex-wrap:wrap}
+  nav a{color:var(--blue-900);text-decoration:none;padding:8px 10px;border-radius:10px}
+  .grid{display:grid;grid-template-columns:1fr 360px;gap:18px;margin-top:18px}
+  @media(max-width:980px){.grid{grid-template-columns:1fr} .top-meta{align-items:flex-start}}
+  .card{background:var(--card);padding:14px;border-radius:var(--radius);box-shadow:0 6px 30px rgba(11,19,34,0.04)}
+  .hero{display:flex;gap:18px;align-items:center}
+  .hero img{width:220px;height:140px;object-fit:cover;border-radius:10px}
+  .info small{color:var(--muted)}
+  .hours{margin-top:10px;font-size:14px;color:var(--muted)}
+  .map iframe{width:100%;height:240px;border:0;border-radius:10px}
+  .gallery{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+  .gallery img{width:calc(33.333% - 8px);height:110px;object-fit:cover;border-radius:8px}
+  @media(max-width:480px){.gallery img{width:calc(50% - 8px)}}
+  /* Contact form */
+  form{display:grid;gap:10px}
+  input[type="text"],input[type="email"],textarea{padding:10px;border-radius:8px;border:1px solid #e6edf7;background:transparent}
+  button{padding:10px 14px;border-radius:10px;border:0;background:var(--accent);color:white;font-weight:700;cursor:pointer}
+  .muted{color:var(--muted);font-size:13px}
+  /* Reviews */
+  .reviews-list{display:flex;flex-direction:column;gap:8px}
+  .review{display:flex;gap:10px;align-items:flex-start;padding:8px;border-radius:8px;border:1px solid #eef6ff;background:linear-gradient(180deg,#ffffff,#fbfdff)}
+  .r-name{font-weight:700;font-size:14px}
+  .stars{font-size:13px;color:goldenrod}
+  .r-body{color:#0b1220;font-size:14px}
+  .reviews-actions{text-align:center;margin-top:10px}
+  .floating-call{
+    position:fixed;right:18px;bottom:18px;border-radius:999px;padding:14px 16px;background:var(--blue-700);color:white;font-weight:700;display:none;box-shadow:0 12px 36px rgba(11,79,138,0.2);z-index:999;
+  }
+  @media(max-width:720px){.floating-call{display:block}}
+  footer{margin-top:28px;text-align:center;color:var(--muted);font-size:13px}
+  /* compressed reviews style */
+  .review .meta{display:flex;flex-direction:column}
+  .review .meta small{color:var(--muted);font-size:12px}
+  /* small badges */
+  .badge{display:inline-block;padding:6px 8px;border-radius:999px;background:#eef7ff;color:var(--blue-900);font-weight:700;font-size:13px}
+</style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">RA</div>
+        <div>
+          <h1>Ricky's Auto Repair</h1>
+          <div class="muted">3216 E Admiral Pl, Tulsa, OK 74110</div>
+        </div>
+      </div>
+
+      <div class="top-meta">
+        <a class="phone" href="tel:+19188355558">+1 (918) 835-5558</a>
+        <a class="call-cta" href="tel:+19188355558" aria-label="Call Ricky's Auto Repair">Call Now</a>
+      </div>
+    </header>
+
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#gallery">Photos</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#contact">Contact</a>
+      <a href="#map">Map & Hours</a>
+    </nav>
+
+    <main class="grid">
+      <section>
+        <div class="card hero">
+          <img src="https://images.unsplash.com/photo-1511919884226-fd3cad34687c?q=80&w=1400&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="Ricky's Auto Repair">
+          <div class="info">
+            <div><strong>Full-service auto repair in Tulsa</strong></div>
+            <div class="muted">ASE Certified technicians • Brake repair • Oil change • Diagnostics</div>
+            <div class="hours card" style="margin-top:10px;padding:10px;border-radius:10px;">
+              <div style="display:flex;justify-content:space-between;align-items:center">
+                <div><strong>Hours</strong></div>
+                <div class="badge">Open Tue–Sat</div>
+              </div>
+              <div style="margin-top:8px;font-size:14px">
+                <div>Monday — 9:30 AM–6 PM</div>
+                <div>Tuesday — 9:30 AM–6 PM</div>
+                <div>Wednesday — 9:30 AM–6 PM</div>
+                <div>Thursday — 9:30 AM–6 PM</div>
+                <div>Friday — 9:30 AM–6 PM</div>
+                <div>Saturday — 9:30 AM–3 PM</div>
+                <div>Sunday — Closed</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <section id="services" style="margin-top:14px" class="card">
+          <h2>Services</h2>
+          <p class="muted">Brakes, oil changes, engine diagnostics, AC service, tires, transmission, and more.</p>
+          <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:8px">
+            <div class="badge">Brake Repair</div>
+            <div class="badge">Oil Change</div>
+            <div class="badge">Diagnostics</div>
+            <div class="badge">Tires</div>
+            <div class="badge">Transmission</div>
+          </div>
+        </section>
+
+        <section id="gallery" class="card" style="margin-top:14px">
+          <h2>Photos</h2>
+          <p class="muted">Replace the placeholder images with real shop photos in /images/</p>
+          <div class="gallery">
+            <img alt="shop 1" src="https://images.unsplash.com/photo-1542362567-b07e54358753?q=80&w=1200&auto=format&fit=crop&s=placeholder">
+            <img alt="shop 2" src="https://images.unsplash.com/photo-1519710164239-da123dc03ef4?q=80&w=1200&auto=format&fit=crop&s=placeholder">
+            <img alt="shop 3" src="https://images.unsplash.com/photo-1502877338535-766e1452684a?q=80&w=1200&auto=format&fit=crop&s=placeholder">
+            <!-- Add your own images in repository under /images and replace src with /images/yourphoto.jpg -->
+          </div>
+        </section>
+
+        <section id="reviews" class="card" style="margin-top:14px">
+          <h2>Customer Reviews</h2>
+          <p class="muted">Real customer ratings. Click "Show more" to reveal additional reviews.</p>
+
+          <!--
+            IMPORTANT:
+            Replace the contents of the REVIEWS array in the script below with your reviews exactly.
+            Keep the format like:
+            { name: "Reviewer 9", rating: 5, body: "" },
+            Do not change review text content programmatically — this script will display whatever you paste here.
+          -->
+          <div id="reviews-container" class="reviews-list" aria-live="polite"></div>
+
+          <div class="reviews-actions">
+            <button id="reviews-more-btn" style="display:none">Show more</button>
+          </div>
+        </section>
+
+        <section id="contact" class="card" style="margin-top:14px">
+          <h2>Contact</h2>
+          <p class="muted">Prefer email? Fill the form — it will open your email client if the site can't POST.</p>
+
+          <!--
+            FORM NOTES:
+            - For a static GitHub Pages site: uncomment the mailto fallback (JS triggers mailto) or sign up with Formspree and set `formAction`.
+            - To integrate Formspree: create a Formspree project and set `formAction = "https://formspree.io/f/your-id"` in the form element (see commented code below).
+          -->
+          <form id="contact-form" onsubmit="return submitContact(event)" novalidate>
+            <input id="name" name="name" type="text" placeholder="Your name" required>
+            <input id="email" name="email" type="email" placeholder="Your email" required>
+            <input id="phone" name="phone" type="text" placeholder="Phone (optional)">
+            <textarea id="message" name="message" placeholder="How can we help?" rows="4" required></textarea>
+
+            <!-- To use Formspree: replace the form tag above with:
+              <form id="contact-form" action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST">
+            -->
+            <div style="display:flex;gap:8px;align-items:center">
+              <button type="submit">Send Message</button>
+              <div class="muted" style="font-size:13px">Or call <a href="tel:+19188355558">+1 (918) 835-5558</a></div>
+            </div>
+            <div id="contact-success" style="display:none;color:green;margin-top:8px"></div>
+          </form>
+        </section>
+
+      </section>
+
+      <aside>
+        <div class="card map" id="map">
+          <h3>Find Us</h3>
+          <!-- Live google iframe using the provided URL -->
+          <iframe
+            src="https://www.google.com/maps/place/Ricky's+Auto+Repair/@36.0832809,-96.0160949,12z/data=!4m10!1m2!2m1!1sauto+repair+oklahoma+tulsa!3m6!1s0x87b6ec554730394b:0xdaf123c95b61b2c!8m2!3d36.1604766!4d-95.9418977!15sChphdXRvIHJlcGFpciBva2xhaG9tYSB0dWxzYVocIhphdXRvIHJlcGFpciBva2xhaG9tYSB0dWxzYZIBEGF1dG9fcmVwYWlyX3Nob3CaASNDaFpEU1VoTk1HOW5TMFZKUTBGblNVTlhaemxQYmxoQkVBRaoBcgoHL20vMGs0agoJL20vMDEza2N2CggvbS8wNW1waBABKg8iC2F1dG8gcmVwYWlyKAAyHxABIhsGO30atye_confClmYC2mp3WCc_JXM4_Cuoj4yHhACIhphdXRvIHJlcGFpciBva2xhaG9tYSB0dWxzYeABAPoBBAgAECs!16s%2Fg%2F1tfc2jmz?entry=ttu&g_ep=EgoyMDI1MDkwMy4wIKXMDSoASAFQAw%3D%3D"
+            allowfullscreen="" loading="lazy"></iframe>
+
+          <div style="margin-top:10px">
+            <div><strong>Address</strong></div>
+            <div class="muted">3216 E Admiral Pl, Tulsa, OK 74110</div>
+            <div style="margin-top:8px"><strong>Phone</strong></div>
+            <a class="phone" href="tel:+19188355558">+1 (918) 835-5558</a>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top:14px">
+          <h3>Quick Info</h3>
+          <div class="muted">
+            <div><strong>Payment</strong> — Cash, Card</div>
+            <div style="margin-top:6px"><strong>Square Location ID</strong> — <code id="square-id">YOUR_LOCATION_ID</code></div>
+            <div style="margin-top:6px"><small>Replace <code>YOUR_LOCATION_ID</code> in the code where noted to connect Square (if used).</small></div>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top:14px">
+          <h3>Hours</h3>
+          <div class="muted">
+            <div>Mon–Fri: 9:30 AM–6 PM</div>
+            <div>Sat: 9:30 AM–3 PM</div>
+            <div>Sun: Closed</div>
+          </div>
+        </div>
+      </aside>
+    </main>
+
+    <footer>
+      <div>© <span id="year"></span> Ricky's Auto Repair — Built for GitHub Pages</div>
+      <div class="muted">If you need edits, paste your review array into the REVIEWS variable in the script block.</div>
+    </footer>
+  </div>
+
+  <a class="floating-call" href="tel:+19188355558">Call +1 (918) 835-5558</a>
+
+<script>
+  // ======================
+  // REVIEWS DATA
+  // ======================
+  // IMPORTANT:
+  // Replace the array below with your reviews exactly. Keep the syntax:
+  // { name: "Reviewer 9", rating: 5, body: "" },
+  //
+  // Example (this block already contains the names & ratings you specified)
+  const REVIEWS = [
+    { name: "Reviewer 1", rating: 5, body: "" },
+    { name: "Reviewer 2", rating: 5, body: "" },
+    { name: "Reviewer 3", rating: 5, body: "" },
+    { name: "Reviewer 4", rating: 5, body: "" },
+    { name: "Reviewer 5", rating: 5, body: "" },
+    { name: "Reviewer 6", rating: 5, body: "" },
+
+    // Exceptions / lower ratings you listed:
+    { name: "Hector Perez", rating: 4, body: "" },
+    { name: "Juan Domineguiz", rating: 4, body: "" },   // interpreted as 4-star per your note
+    { name: "Ma.Carmen, RamirezLopez", rating: 4, body: "" },
+    { name: "I B", rating: 3, body: "" },
+    { name: "Randy Reed", rating: 3, body: "" },
+    { name: "JT Hernan", rating: 2, body: "" },
+    { name: "Sami Littlecreek", rating: 2, body: "" },
+    { name: "Felipe Almander", rating: 2, body: "" },
+    { name: "Heather S", rating: 1, body: "" },
+    { name: "Travis edward", rating: 1, body: "" },
+    { name: "Priyanka Miron", rating: 1, body: "" },
+    { name: "Tabitha", rating: 1, body: "" }
+  ];
+  // If you will paste your own reviews ensure you keep the same structure and that any review bodies
+  // are preserved (this script will not alter them).
+
+  // ======================
+  // Reviews rendering logic (shows 6 at a time)
+  // ======================
+  const REVIEWS_PER_PAGE = 6;
+  let shown = 0;
+
+  function starHTML(n){
+    // n is integer 0-5. We'll render filled and outline stars.
+    let out = '';
+    for(let i=0;i<5;i++){
+      out += (i < n) ? '★' : '☆';
+    }
+    return out;
+  }
+
+  function renderReviews(){
+    const container = document.getElementById('reviews-container');
+    container.innerHTML = '';
+    const toShow = Math.min(shown, REVIEWS.length);
+    for (let i = 0; i < toShow; i++){
+      const r = REVIEWS[i];
+      const div = document.createElement('div');
+      div.className = 'review';
+      // compressed compact layout
+      div.innerHTML = `
+        <div style="width:48px;height:48px;border-radius:8px;background:linear-gradient(135deg,var(--blue-700),var(--blue-500));display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700">
+          ${(r.name || '?').split(' ').slice(0,2).map(s=>s[0]).join('')}
+        </div>
+        <div class="meta" style="flex:1">
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <div>
+              <div class="r-name">${escapeHtml(r.name)}</div>
+              <small class="muted">${r.rating} / 5</small>
+            </div>
+            <div class="stars" aria-hidden="true">${starHTML(Math.round(r.rating))}</div>
+          </div>
+          <div class="r-body" style="margin-top:8px">${(r.body && r.body.trim()!=="") ? escapeHtml(r.body) : '<em style="color:var(--muted)">No description</em>'}</div>
+        </div>
+      `;
+      container.appendChild(div);
+    }
+
+    const btn = document.getElementById('reviews-more-btn');
+    if (shown >= REVIEWS.length){
+      btn.style.display = 'none';
+    } else {
+      btn.style.display = 'inline-block';
+      const remaining = REVIEWS.length - shown;
+      btn.textContent = `Show ${Math.min(REVIEWS_PER_PAGE, remaining)} more (${remaining} left)`;
+    }
+  }
+
+  function showMoreReviews(){
+    shown = Math.min(REVIEWS.length, shown + REVIEWS_PER_PAGE);
+    renderReviews();
+    // smooth scroll newly added area into view on mobile
+    document.getElementById('reviews-more-btn').scrollIntoView({behavior:'smooth', block:'center'});
+  }
+
+  function escapeHtml(s){
+    if(!s) return '';
+    return s.replace(/[&<>"']/g, function(m){
+      return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m];
+    });
+  }
+
+  // initial setup
+  (function initReviews(){
+    // show initial six
+    shown = Math.min(REVIEWS_PER_PAGE, REVIEWS.length);
+    const btn = document.getElementById('reviews-more-btn');
+    btn.addEventListener('click', showMoreReviews);
+    renderReviews();
+  })();
+
+  // ======================
+  // Contact form JS: sends via Formspree if you set action, otherwise uses mailto fallback
+  // ======================
+  function submitContact(e){
+    e.preventDefault();
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const phone = document.getElementById('phone').value.trim();
+    const message = document.getElementById('message').value.trim();
+    if (!name || !email || !message) {
+      alert('Please fill name, email and message.');
+      return false;
+    }
+
+    // If you have a real backend/Formspree, comment out the mailto fallback and let the form action run.
+    // Fallback: open user's email client prefilled
+    const subject = encodeURIComponent('Website Inquiry — ' + name);
+    const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\nPhone: ${phone}\n\n${message}`);
+    const mailto = `mailto:info@rickysautorepair.example?subject=${subject}&body=${body}`;
+    // Try to open mail client
+    window.location.href = mailto;
+
+    // Show success message after a moment (best-effort)
+    setTimeout(()=> {
+      const s = document.getElementById('contact-success');
+      s.textContent = 'Your message composer should be open. If not, email info@rickysautorepair.example directly.';
+      s.style.display = 'block';
+    }, 800);
+
+    return false;
+  }
+
+  // ======================
+  // Small helpers
+  // ======================
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Show a tooltip / focus effect for square ID area (developer note)
+  // Replace YOUR_LOCATION_ID (below comment) with your Square location ID where indicated.
+  // e.g. const SQUARE_LOCATION_ID = 'sq0idp-xxxxxxxxxxxx';
+  // The placeholder is shown in the sidebar; update it only in your code.
+  const SQUARE_LOCATION_ID = 'YOUR_LOCATION_ID'; // <-- REPLACE THIS WITH YOUR ACTUAL SQUARE LOCATION ID
+  if (SQUARE_LOCATION_ID && SQUARE_LOCATION_ID !== 'YOUR_LOCATION_ID') {
+    document.getElementById('square-id').textContent = SQUARE_LOCATION_ID;
+  }
+
+  // Accessibility: allow show more via keyboard
+  document.getElementById('reviews-more-btn').addEventListener('keyup', (ev) => {
+    if (ev.key === 'Enter') showMoreReviews();
+  });
+
+  // OPTIONAL: if you want to automatically fetch reviews from a JSON file hosted in repo,
+  // replace the REVIEWS const and use fetch('/reviews.json').then(r=>r.json()).then(data=>{...});
+  //
+  // NOTE ABOUT REVIEWS: The site will display the reviews exactly as you paste them into REVIEWS.
+  // Do not manipulate them beforehand if you want verbatim preservation.
+
+</script>
+</body>
+</html>
