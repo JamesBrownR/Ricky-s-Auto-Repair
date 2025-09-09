@@ -700,21 +700,327 @@
 <script>
   // Reviews data - same as original but with better display logic
   const REVIEWS = [
-    { name: "Sarah Johnson", rating: 5, body: "Excellent service and honest pricing. They fixed my brake issue quickly and explained everything clearly." },
-    { name: "Mike Rodriguez", rating: 5, body: "Been taking my trucks here for years. Ricky and his team always do quality work at fair prices." },
-    { name: "Jennifer Lee", rating: 5, body: "Fast, professional service. They diagnosed my engine problem in minutes and had me back on the road same day." },
-    { name: "Tom Wilson", rating: 5, body: "Trustworthy mechanics who don't try to sell you services you don't need. Highly recommend!" },
-    { name: "Lisa Martinez", rating: 5, body: "Great customer service and quality repairs. They've earned my business for life." },
-    { name: "David Chen", rating: 5, body: "Professional, efficient, and honest. Fixed my transmission issue at a fraction of dealer price." },
-    { name: "Hector Perez", rating: 4, body: "Good service overall, just took a bit longer than expected but the work was done right." },
-    { name: "Juan Domineguiz", rating: 4, body: "Solid repair work, fair prices. Would use again for future repairs." },
-    { name: "Ma.Carmen RamirezLopez", rating: 4, body: "Helpful staff and quality work. Minor communication issues but good results." },
-    { name: "I B", rating: 3, body: "Decent service but had to bring car back once for a small issue they missed." },
-    { name: "Randy Reed", rating: 3, body: "Average experience. Work was fine but nothing exceptional." },
-    { name: "JT Hernan", rating: 2, body: "Service was okay but took longer than quoted and communication could be better." },
-    { name: "Sami Littlecreek", rating: 2, body: "Had some issues with the initial repair but they did make it right eventually." },
-    { name: "Felipe Almander", rating: 2, body: "Work was adequate but had some concerns about the timeline and final cost." }
-  ];
+  {
+    "name": "Ma.Carmen, RamirezLopez",
+    "rating": 4,
+    "body": "Big selection ,parts at a good price."
+  },
+  {
+    "name": "I B",
+    "rating": 3,
+    "body": ""
+  },
+  {
+    "name": "Randy Reed",
+    "rating": 3,
+    "body": "They're fast and they do good work"
+  },
+  {
+    "name": "J T Hernan",
+    "rating": 2,
+    "body": ""
+  },
+  {
+    "name": "Sammi Littlecreek",
+    "rating": 2,
+    "body": ""
+  },
+  {
+    "name": "Felipe Almander",
+    "rating": 2,
+    "body": ""
+  },
+  {
+    "name": "Heather S",
+    "rating": 1,
+    "body": ""
+  },
+  {
+    "name": "Travis Edwards",
+    "rating": 1,
+    "body": ""
+  },
+  {
+    "name": "Priyanka Menon",
+    "rating": 1,
+    "body": "Negative\nQuality, Professionalism, Value"
+  },
+  {
+    "name": "Tabitha",
+    "rating": 1,
+    "body": "I waited a week for these guys to look at my car - now they remember me but they said they don’t do this kind of work!!!  Obviously these guys either don’t like white people or don’t like Americans"
+  },
+  {
+    "name": "Hector Perez",
+    "rating": 4,
+    "body": ""
+  },
+  {
+    "name": "Juan Dominguez",
+    "rating": 4,
+    "body": ""
+  },
+  {
+    "name": "Economic Economic",
+    "rating": 5,
+    "body": "We love the work that he does on are Vehicles, we sure appreciate. May God bless him always. I will recommend it for a 💯 100% English in Spanish, he's bilingual."
+  },
+  {
+    "name": "Liz M",
+    "rating": 5,
+    "body": "I live in Missouri, but If I can get my cars there, this is who I want to check my vehicle's out. They are honest, booked, and busy all the time. Once they get you in, your in and out. My dad used to never let me take my cars to mechanics."
+  },
+  {
+    "name": "Erick Soto",
+    "rating": 5,
+    "body": "Needed a wheel bearing pressed in got it done for me for good price and then had to come back cause the part store sold me the wrong hub and he put my old back on no charge ! Highly recommended!"
+  },
+  {
+    "name": "James Brown",
+    "rating": 5,
+    "body": "I really enjoy every interaction I have with these guys, they go well above and beyond the normal call, and always have a smile on their faces. One of the most knowledgeable mechanics I've ever met."
+  },
+  {
+    "name": "Jim Haney",
+    "rating": 5,
+    "body": "Great guys!\nGreat service!\nGreat price!\nThanks Ricky!"
+  },
+  {
+    "name": "Valeria Hamilton",
+    "rating": 5,
+    "body": "Honest and trustworthy mechanic will always return comfortable prices"
+  },
+  {
+    "name": "Levi Lazenby",
+    "rating": 5,
+    "body": "The service was excellent and they're honest, I recommend them to all my family and friends"
+  },
+  {
+    "name": "D3ë",
+    "rating": 5,
+    "body": "Fair pricings! Customer friendly."
+  },
+  {
+    "name": "Billy Sunagoowie",
+    "rating": 5,
+    "body": "Great mechanic at a very reasonable price!!"
+  },
+  {
+    "name": "Nwww Cwww",
+    "rating": 5,
+    "body": "Good service, they are always busy!"
+  },
+  {
+    "name": "Alberto Candelario",
+    "rating": 5,
+    "body": "Very honest  and quality work"
+  },
+  {
+    "name": "Eduardo Camarena",
+    "rating": 5,
+    "body": "Good services axalen people"
+  },
+  {
+    "name": "Alonzo Gonzalez (All_Gonez)",
+    "rating": 5,
+    "body": "Great mechanic"
+  },
+  {
+    "name": "Hector Ornelas",
+    "rating": 5,
+    "body": "Great service."
+  },
+  {
+    "name": "Fernando Macias",
+    "rating": 5,
+    "body": "Affordable mechanic!!!"
+  },
+  {
+    "name": "Ulises006",
+    "rating": 5,
+    "body": "The net is raffled, a little expensive but I feel that it provides a good service\nTranslated by Google\u00a0\u00b7\u00a0See original (Spanish)"
+  },
+  {
+    "name": "silvestre mendez",
+    "rating": 5,
+    "body": "Excellent service, very professional attention and accurate automotive dignity, a very good price on my first visit, more than obliged to a second visit.\nTranslated by Google\u00a0\u00b7\u00a0See original (Spanish)"
+  },
+  {
+    "name": "R",
+    "rating": 5,
+    "body": "It's a lot of work and takes time to be there but it's worth it excellent service\nTranslated by Google\u00a0\u00b7\u00a0See original (Spanish)"
+  },
+  {
+    "name": "Rocio Castro",
+    "rating": 5,
+    "body": "Excellent service and affordable prices.\nTranslated by Google\u00a0\u00b7\u00a0See original (Spanish)"
+  },
+  {
+    "name": "Aaron Gonzalez",
+    "rating": 5,
+    "body": "Because he is a good mechanic\nTranslated by Google\u00a0\u00b7\u00a0See original (Spanish)"
+  },
+  {
+    "name": "Danny yurel Flores",
+    "rating": 5,
+    "body": "Chingon quality mechanics\nTranslated by Google\u00a0\u00b7\u00a0See original (Spanish)"
+  },
+  {
+    "name": "Richard Gomez",
+    "rating": 5,
+    "body": "GooooD"
+  },
+  {
+    "name": "Catherine “Cat” Smith",
+    "rating": 5,
+    "body": "Positive\nQuality, Professionalism, Value"
+  },
+  {
+    "name": "Abraham Puentes",
+    "rating": 5,
+    "body": "New"
+  },
+  {
+    "name": "Anh Dang",
+    "rating": 5,
+    "body": ""
+  },
+  {
+    "name": "Carl Fansler",
+    "rating": 5,
+    "body": ""
+  },
+  {
+    "name": "WILLIEJOE MOONEY",
+    "rating": 5,
+    "body": ""
+  },
+  {
+    "name": "ELISA BARRERA",
+    "rating": 5,
+    "body": ""
+  },
+  {
+    "name": "Jackie Davis",
+    "rating": 5,
+    "body": ""
+  },
+  {
+    "name": "Edd Men",
+    "rating": 5,
+    "body": ""
+  },
+  {
+    "name": "MAZINGER - Z",
+    "rating": 5,
+    "body": ""
+  },
+  {
+    "name": "Sparkle Elliott",
+    "rating": 5,
+    "body": ""
+  },
+  {
+    "name": "Viora Ransom",
+    "rating": 5,
+    "body": ""
+  },
+  {
+    "name": "Alieu Sambou",
+    "rating": 5,
+    "body": ""
+  },
+  {
+    "name": "Courtney Graves (Sue)",
+    "rating": 5,
+    "body": ""
+  },
+  {
+    "name": "THE CAPTAIN",
+    "rating": 5,
+    "body": ""
+  },
+  {
+    "name": "John Hughes",
+    "rating": 5,
+    "body": ""
+  },
+  {
+    "name": "David",
+    "rating": 5,
+    "body": ""
+  },
+  {
+    "name": "Shirley Toledo",
+    "rating": 5,
+    "body": ""
+  },
+  {
+    "name": "Zoe Watts",
+    "rating": 5,
+    "body": ""
+  },
+  {
+    "name": "Reinaldo Flores",
+    "rating": 5,
+    "body": ""
+  },
+  {
+    "name": "Mike Smith",
+    "rating": 5,
+    "body": ""
+  },
+  {
+    "name": "Lilia",
+    "rating": 5,
+    "body": ""
+  },
+  {
+    "name": "Rosalba Flores",
+    "rating": 5,
+    "body": ""
+  },
+  {
+    "name": "Arthur Da Author",
+    "rating": 5,
+    "body": ""
+  },
+  {
+    "name": "Andrea Munoz",
+    "rating": 5,
+    "body": ""
+  },
+  {
+    "name": "Monica Ramirez",
+    "rating": 5,
+    "body": ""
+  },
+  {
+    "name": "saul Rojas",
+    "rating": 5,
+    "body": ""
+  },
+  {
+    "name": "Yaz Benitez",
+    "rating": 5,
+    "body": ""
+  },
+  {
+    "name": "Pedro Padilla",
+    "rating": 5,
+    "body": ""
+  },
+  {
+    "name": "Anthony Davis",
+    "rating": 5,
+    "body": ""
+  },
+  {
+    "name": "Hosmin Rodriguez",
+    "rating": 5,
+    "body": ""
+  }
+];
 
   let displayedReviews = 0;
   const REVIEWS_PER_LOAD = 6;
